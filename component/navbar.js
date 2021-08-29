@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
-import 'tailwindcss/tailwind.css'
-
 
 function classNames (...classes) {
   return classes.filter(Boolean).join(' ')
@@ -59,11 +57,12 @@ function Navbar () {
                       <Link
                         key={item.name}
                         href={item.href}
+                        passHref
                       >
                         <span
                             onClick={() => changeFocus(item)}
                             className={classNames(
-                            item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                            item.current ? 'bg-gray-900 text-white cursor-pointer' : 'cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white',
                             'px-3 py-2 rounded-md text-sm font-medium'
                             )}
                             aria-current={item.current ? 'page' : undefined}>
@@ -83,6 +82,7 @@ function Navbar () {
                 <Link
                   key={item.name}
                   href={item.href}
+                  passHref
                 >
                   <p
                       onClick={() => changeFocus(item)}

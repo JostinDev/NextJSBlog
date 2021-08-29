@@ -1,7 +1,18 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-export default function Blog() {
+
+import { getSortedPostsData } from '../component/posts'
+
+export async function getStaticProps() {
+    const allPostsData = getSortedPostsData()
+    return {
+        props: {
+            allPostsData
+        }
+    }
+}
+export default function Blog({ allPostsData }) {
   return (
     <div className='container mx-auto'>
       <Head>
@@ -11,6 +22,20 @@ export default function Blog() {
       </Head>
       <div>
         <p className='my-4 font-bold h-2'>Blog</p>
+          {/* Add this <section> tag below the existing <section> tag */}
+          <section>
+              <ul>
+                  {allPostsData.map(({ id, date, title }) => (
+                      <li key={id}>
+                          {title}
+                          <br />
+                          {id}
+                          <br />
+                          {date}
+                      </li>
+                  ))}
+              </ul>
+          </section>
       </div>
     </div>
   )
