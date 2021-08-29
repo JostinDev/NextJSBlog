@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
-
+import Link from 'next/link'
 
 import { getSortedPostsData } from '../component/posts'
 
@@ -29,9 +28,10 @@ export default function Blog({ allPostsData }) {
                       <li key={id}>
                           {title}
                           <br />
-                          {id}
-                          <br />
-                          {date}
+                          <Link href={'posts/' +id}>
+                              <span className='text-blue-800 hover:text-blue-600 cursor-pointer'>Read me</span>
+                          </Link>
+                          <p>{date}</p>
                       </li>
                   ))}
               </ul>

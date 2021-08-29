@@ -21,14 +21,12 @@ export async function getStaticPaths() {
 export default function Post({ postData }) {
     return (
         <Layout>
-            {postData.title}
-            <br />
-            {postData.id}
-            <br />
-            {postData.date}
-            <br />
-
-            <Markdown>{postData.content}</Markdown>
+            <div className='container mx-auto max-w-screen-lg pt-10 px-4'>
+                <h1 className='text-4xl'>{postData.title}</h1>
+                {console.log(postData.id)}
+                <p className='text-gray-600 pt-4'>{postData.date}</p>
+                <Markdown className='markdown pt-10'>{postData.content}</Markdown>
+            </div>
 
         </Layout>
     )
