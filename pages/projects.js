@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-export default function Home() {
+export default function Projects() {
   return (
     <div className='container mx-auto'>
       <Head>
@@ -10,7 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <p className='my-4 font-bold h-2'>Hello, lost soul</p>
+        <p className='my-4 font-bold h-2'>Projects</p>
       </div>
     </div>
   )
