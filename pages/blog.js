@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 import { getSortedPostsData } from '../component/posts'
+import {useState} from "react";
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData()
@@ -12,6 +13,24 @@ export async function getStaticProps() {
     }
 }
 export default function Blog({ allPostsData }) {
+
+  const[start,setStart] = useState(0)
+  const[elementToDisplay,setElementToDisplay] = useState(2)
+  const[page,setPage] = useState(1)
+
+  function previous () {
+    if(!(start < elementToDisplay)) {
+      setStart(start-elementToDisplay)
+      setPage(page-1)
+    }
+  }
+  function next() {
+    if(!((elementToDisplay * page) >= allPostsData.length)) {
+      setStart(start+elementToDisplay)
+      setPage(page+1)
+    }
+  }
+
   return (
     <div className='container mx-auto'>
       <Head>
@@ -21,10 +40,12 @@ export default function Blog({ allPostsData }) {
       </Head>
       <div>
         <p className='my-4 font-bold h-2'>Blog</p>
+        <p className='cursor-pointer inline-block pr-10' onClick={()=>previous()}>&lt; Previous</p>
+        <p className='cursor-pointer inline-block' onClick={()=>next()}>Next &gt;</p>
           {/* Add this <section> tag below the existing <section> tag */}
           <section>
               <ul>
-                  {allPostsData.map(({ id, date, title }) => (
+                  {allPostsData.slice(start,start+elementToDisplay).map(({ id, date, title }) => (
                       <li key={id}>
                           {title}
                           <br />
