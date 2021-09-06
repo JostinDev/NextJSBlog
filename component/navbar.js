@@ -1,13 +1,18 @@
-import React, { useState } from 'react'
+import React, {useEffect, useState} from 'react'
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
+import { useRouter } from "next/router";
+
 
 function classNames (...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 function Navbar () {
+
+  const router = useRouter();
+
   const nav = [
     { id: 0, name: 'Home', href: '/', current: true },
     { id: 1, name: 'Projects', href: '/projects', current: false },
@@ -15,6 +20,26 @@ function Navbar () {
   ]
 
   const [navigation, setNavigation] = useState(nav)
+
+  useEffect(() => {
+    // Update the document title using the browser API
+   console.log(router.pathname)
+    switch (router.pathname) {
+      case '/':
+        changeFocus(nav[0])
+        break;
+      case '/projects':
+        changeFocus(nav[1])
+        break;
+      case '/blog':
+        changeFocus(nav[2])
+        break;
+      case '/posts/[id]':
+        changeFocus(nav[2])
+        break;
+    }
+  },[]);
+
 
   function changeFocus (item) {
     const tempNav = [...nav]
