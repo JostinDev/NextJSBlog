@@ -40,7 +40,7 @@ export default function Blog({ allPostsData }) {
       <div>
         <p className='my-10 text-6xl font-medium text-gray-800'>The Blog</p>
           {/* Add this <section> tag below the existing <section> tag */}
-        <div className=''>
+        <div>
           {allPostsData.slice(start,start+elementToDisplay).map(({ id, date, title, img },index) => (
             <Post key={id} img={img} id={id} date={date} title={title} isFirstPost={index === 0 && page === 1}/>
           ))}

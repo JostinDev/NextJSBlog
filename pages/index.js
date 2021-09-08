@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Image from "next/image"
+import Link from "next/link";
 
 export default function Home({allPostsData}) {
   return (
@@ -9,7 +11,40 @@ export default function Home({allPostsData}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <p className='my-4 font-bold h-2'>Hello, lost soul</p>
+        <div className='flex flex-row mt-20'>
+          <div className='w-1/2'>
+            <p className='text-6xl text-gray-800'>Hello! I Am</p>
+            <p className='text-6xl font-semibold py-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>Justin Nydegger</p>
+            <p className='text-gray-600 mt-5 text-justify'>
+              I am a swiss software engineer who seeks to create beautiful web experiences. I am a passionate learner
+              and a hard worker. I consider myself as a determined person. I always try to improve myself and other
+              people’s lives by creating tools such as
+              <span className='cursor-pointer font-semibold p-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:from-purple-300 hover:via-pink-400 hover:to-red-400'>
+                <a target='_blank' rel='noreferrer' href='https://embrave.app/'>Embrave</a>
+              </span>. My free time is fully dedicated to trying out and learning new skills.
+              My hobbies are : programming, sports, skiing, learning and video editing. As a very
+              curious person, travelling the world is one of my biggest dreams.</p>
+            <p className='text-gray-600 mt-3 text-justify'>
+              Currently learning
+              <span className='cursor-pointer font-semibold p-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:from-purple-300 hover:via-pink-400 hover:to-red-400'>
+                <a target='_blank' rel='noreferrer' href='https://www.blender.org/'>Blender</a>
+              </span>
+              and
+              <span className='cursor-pointer font-semibold p-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:from-purple-300 hover:via-pink-400 hover:to-red-400'>
+                <a target='_blank' rel='noreferrer' href='https://threejs.org/'>Three.js</a>
+              </span>
+            </p>
+            <Link href='/projects' passHref>
+              <p className='py-3 px-4 mt-5 rounded text-white font-semibold cursor-pointer inline-block bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:from-purple-300 hover:via-pink-400 hover:to-red-400'>
+               See my projects
+              </p>
+            </Link>
+          </div>
+          <div className='w-1/2 text-center'>
+            <Image src='/images/home/profile2.png' height={450} width={450} layout={"intrinsic"} alt={'Profile Picture'}/>
+          </div>
+
+        </div>
       </div>
     </div>
   )
