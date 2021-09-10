@@ -19,9 +19,8 @@ export default function Custom404() {
 
     //Update the sizes when the screen is resized. If it's not done, the size of the simulation is fixed
     window.addEventListener('resize', () => {
-      // Update sizes
-      sizes.width = 800
-      sizes.height = 400
+
+      resize()
 
       // Update camera
       camera.aspect = sizes.width / sizes.height
@@ -35,13 +34,38 @@ export default function Custom404() {
 
   },[]);
 
+  function resize() {
+    if(window.innerWidth <= 300) {
+      // Update sizes
+      sizes.width = 150
+      sizes.height = 150
+    } else if(window.innerWidth <= 400) {
+      // Update sizes
+      sizes.width = 250
+      sizes.height = 250
+    } else if(window.innerWidth <= 700) {
+      // Update sizes
+      sizes.width = 300
+      sizes.height = 300
+    } else if(window.innerWidth <= 900) {
+      // Update sizes
+      sizes.width = 600
+      sizes.height = 300
+    } else if(window.innerWidth <= 900) {
+      // Update sizes
+      sizes.width = 800
+      sizes.height = 400
+    }
+  }
+
 
   function init() {
-
     sizes = {
       width: 800,
       height: 400
     }
+
+    resize()
 
     camera = new THREE.PerspectiveCamera( 70, sizes.width / sizes.height, 0.01, 10 );
     camera.position.z = 4;
@@ -51,9 +75,8 @@ export default function Custom404() {
     scene = new THREE.Scene();
 
     // Create the light the three.js elements
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6)
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.2)
     scene.add(ambientLight)
-    const color = '#b63cfc'
     const light = new THREE.PointLight( 0xb63cfc, 2, 5 );
     light.position.set( 2, 2, 3 );
     scene.add( light );
@@ -92,12 +115,14 @@ export default function Custom404() {
 
     renderer = new THREE.WebGLRenderer({
       canvas: canvas,
-      antialias: true
+      antialias: true,
+      alpha: true
     })
 
     renderer.setSize(sizes.width, sizes.height)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     renderer.outputEncoding = THREE.sRGBEncoding
+    renderer.setClearColor( 0x000000, 0 ); // the default
 
     renderer.setAnimationLoop( animation );
 
@@ -110,7 +135,7 @@ export default function Custom404() {
     previousTime = elapsedTime
 
     if(mixerGhost)
-      mixerGhost.update(deltaTime * 0.5)
+      mixerGhost.update(deltaTime * 0.75)
 
     renderer.render( scene, camera );
 
