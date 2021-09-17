@@ -4,16 +4,15 @@ import Link from "next/link";
 import * as THREE from "three";
 import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
 import {useEffect} from "react";
+import {OrbitControls} from "three/examples/jsm/controls/OrbitControls"
+
 
 export default function Home() {
 
-  let camera, scene, renderer;
+  let camera, scene, renderer, controls;
   let sizes
-  let mixerGhost
   let previousTime = 0
   const clock = new THREE.Clock()
-  let ghost
-
 
   useEffect(() => {
     init();
@@ -63,15 +62,15 @@ export default function Home() {
   function init() {
     sizes = {
       width: 800,
-      height: 400
+      height: 800
     }
 
     resize()
 
-    camera = new THREE.PerspectiveCamera( 70, sizes.width / sizes.height, 0.01, 10 );
-    camera.position.z = 4;
-    camera.position.y = -0.5;
-
+    camera = new THREE.PerspectiveCamera( 50, sizes.width / sizes.height, 0.01, 50 );
+    camera.position.x = 20;
+    camera.position.y = 10;
+    camera.position.z = -15;
 
     scene = new THREE.Scene();
 
@@ -83,37 +82,33 @@ export default function Home() {
     scene.add( light );
 
 
+    // Load the world and the animals
+    const textureLoader = new THREE.TextureLoader()
+
+    const wallsLoaded = textureLoader.load('textures/Walls.jpg')
+    wallsLoaded.flipY = false
+    wallsLoaded.encoding = THREE.sRGBEncoding
+
+    const wallsTexture = new THREE.MeshBasicMaterial({map: wallsLoaded})
+
     const gltfLoader = new GLTFLoader()
 
     gltfLoader.load(
-      '/models/404.glb',
+      'models/walls.glb',
       (gltf) => {
-        mixerGhost = new THREE.AnimationMixer(gltf.scene)
         gltf.scene.traverse((child) => {
-          if(child.name === "Cylinder") {
-            child.scale.set(1.3, 1.3, 1.3)
-            child.position.x = 0.6
-          }
-          if(child.name === "Cube") {
-            child.scale.set (1.3,1.3,1.3)
-            child.position.z = -0.6
-          }
-
+          child.material = wallsTexture
         })
-        const action0 = mixerGhost.clipAction(gltf.animations[0])
-        action0.play()
-        const action1 = mixerGhost.clipAction(gltf.animations[1])
-        action1.play()
-        const action2 = mixerGhost.clipAction(gltf.animations[2])
-        action2.play()
-        scene.position.z = -1
-        gltf.scene.rotation.y = Math.PI
-        ghost = gltf.scene
         scene.add(gltf.scene)
       }
     )
 
     const canvas = document.getElementById("room");
+
+    // Create the controls
+    controls = new OrbitControls(camera, canvas)
+    controls.enableDamping = true
+    controls.rotateSpeed *= -0.5;
 
     renderer = new THREE.WebGLRenderer({
       canvas: canvas,
@@ -134,13 +129,11 @@ export default function Home() {
     const deltaTime = elapsedTime - previousTime
     previousTime = elapsedTime
 
-    if(mixerGhost)
-      mixerGhost.update(deltaTime * 0.75)
+    controls.update()
 
     renderer.render( scene, camera );
 
   }
-
 
   return (
     <div className='container mx-auto'>
