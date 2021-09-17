@@ -105,6 +105,11 @@ export default function Home() {
     decorationLoaded.encoding = THREE.sRGBEncoding
     const decorationTexture = new THREE.MeshBasicMaterial({map: decorationLoaded})
 
+    const livingRoomLoaded = textureLoader.load('textures/LivingRoom.jpg')
+    livingRoomLoaded.flipY = false
+    livingRoomLoaded.encoding = THREE.sRGBEncoding
+    const livingRoomTexture = new THREE.MeshBasicMaterial({map: livingRoomLoaded})
+
     const gltfLoader = new GLTFLoader()
 
     gltfLoader.load(
@@ -142,6 +147,16 @@ export default function Home() {
       (gltf) => {
         gltf.scene.traverse((child) => {
           child.material = decorationTexture
+        })
+        scene.add(gltf.scene)
+      }
+    )
+
+    gltfLoader.load(
+      'models/livingRoom.glb',
+      (gltf) => {
+        gltf.scene.traverse((child) => {
+          child.material = livingRoomTexture
         })
         scene.add(gltf.scene)
       }
