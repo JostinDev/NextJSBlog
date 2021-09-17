@@ -110,6 +110,11 @@ export default function Home() {
     livingRoomLoaded.encoding = THREE.sRGBEncoding
     const livingRoomTexture = new THREE.MeshBasicMaterial({map: livingRoomLoaded})
 
+    const sofaLoaded = textureLoader.load('textures/Sofa.jpg')
+    sofaLoaded.flipY = false
+    sofaLoaded.encoding = THREE.sRGBEncoding
+    const sofaTexture = new THREE.MeshBasicMaterial({map: sofaLoaded})
+
     const gltfLoader = new GLTFLoader()
 
     gltfLoader.load(
@@ -157,6 +162,16 @@ export default function Home() {
       (gltf) => {
         gltf.scene.traverse((child) => {
           child.material = livingRoomTexture
+        })
+        scene.add(gltf.scene)
+      }
+    )
+
+    gltfLoader.load(
+      'models/sofa.glb',
+      (gltf) => {
+        gltf.scene.traverse((child) => {
+          child.material = sofaTexture
         })
         scene.add(gltf.scene)
       }
