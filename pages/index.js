@@ -91,6 +91,12 @@ export default function Home() {
 
     const wallsTexture = new THREE.MeshBasicMaterial({map: wallsLoaded})
 
+    const shelfLoaded = textureLoader.load('textures/Shelf.jpg')
+    shelfLoaded.flipY = false
+    shelfLoaded.encoding = THREE.sRGBEncoding
+
+    const shelfTexture = new THREE.MeshBasicMaterial({map: shelfLoaded})
+
     const gltfLoader = new GLTFLoader()
 
     gltfLoader.load(
@@ -98,6 +104,16 @@ export default function Home() {
       (gltf) => {
         gltf.scene.traverse((child) => {
           child.material = wallsTexture
+        })
+        scene.add(gltf.scene)
+      }
+    )
+
+    gltfLoader.load(
+      'models/shelf.glb',
+      (gltf) => {
+        gltf.scene.traverse((child) => {
+          child.material = shelfTexture
         })
         scene.add(gltf.scene)
       }
