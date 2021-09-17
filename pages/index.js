@@ -88,14 +88,17 @@ export default function Home() {
     const wallsLoaded = textureLoader.load('textures/Walls.jpg')
     wallsLoaded.flipY = false
     wallsLoaded.encoding = THREE.sRGBEncoding
-
     const wallsTexture = new THREE.MeshBasicMaterial({map: wallsLoaded})
 
     const shelfLoaded = textureLoader.load('textures/Shelf.jpg')
     shelfLoaded.flipY = false
     shelfLoaded.encoding = THREE.sRGBEncoding
-
     const shelfTexture = new THREE.MeshBasicMaterial({map: shelfLoaded})
+
+    const deskLoaded = textureLoader.load('textures/Desk.jpg')
+    deskLoaded.flipY = false
+    deskLoaded.encoding = THREE.sRGBEncoding
+    const deskTexture = new THREE.MeshBasicMaterial({map: deskLoaded})
 
     const gltfLoader = new GLTFLoader()
 
@@ -114,6 +117,16 @@ export default function Home() {
       (gltf) => {
         gltf.scene.traverse((child) => {
           child.material = shelfTexture
+        })
+        scene.add(gltf.scene)
+      }
+    )
+
+    gltfLoader.load(
+      'models/desk.glb',
+      (gltf) => {
+        gltf.scene.traverse((child) => {
+          child.material = deskTexture
         })
         scene.add(gltf.scene)
       }
