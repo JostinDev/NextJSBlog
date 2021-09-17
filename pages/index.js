@@ -100,6 +100,11 @@ export default function Home() {
     deskLoaded.encoding = THREE.sRGBEncoding
     const deskTexture = new THREE.MeshBasicMaterial({map: deskLoaded})
 
+    const decorationLoaded = textureLoader.load('textures/Decoration.jpg')
+    decorationLoaded.flipY = false
+    decorationLoaded.encoding = THREE.sRGBEncoding
+    const decorationTexture = new THREE.MeshBasicMaterial({map: decorationLoaded})
+
     const gltfLoader = new GLTFLoader()
 
     gltfLoader.load(
@@ -127,6 +132,16 @@ export default function Home() {
       (gltf) => {
         gltf.scene.traverse((child) => {
           child.material = deskTexture
+        })
+        scene.add(gltf.scene)
+      }
+    )
+
+    gltfLoader.load(
+      'models/decoration.glb',
+      (gltf) => {
+        gltf.scene.traverse((child) => {
+          child.material = decorationTexture
         })
         scene.add(gltf.scene)
       }
