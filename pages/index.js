@@ -61,13 +61,13 @@ export default function Home() {
 
   function init() {
     sizes = {
-      width: 800,
-      height: 800
+      width: 1024,
+      height: 1024
     }
 
     resize()
 
-    camera = new THREE.PerspectiveCamera( 50, sizes.width / sizes.height, 0.01, 50 );
+    camera = new THREE.PerspectiveCamera( 50, sizes.width / sizes.height, 0.01, 100 );
     camera.position.x = 20;
     camera.position.y = 10;
     camera.position.z = -15;
@@ -114,6 +114,8 @@ export default function Home() {
     sofaLoaded.flipY = false
     sofaLoaded.encoding = THREE.sRGBEncoding
     const sofaTexture = new THREE.MeshBasicMaterial({map: sofaLoaded})
+
+
 
     const gltfLoader = new GLTFLoader()
 
@@ -182,7 +184,8 @@ export default function Home() {
     // Create the controls
     controls = new OrbitControls(camera, canvas)
     controls.enableDamping = true
-    controls.rotateSpeed *= -0.5;
+    controls.rotateSpeed *= -0.5
+    controls.enableZoom = false
 
     renderer = new THREE.WebGLRenderer({
       canvas: canvas,
@@ -202,6 +205,9 @@ export default function Home() {
     const elapsedTime = clock.getElapsedTime()
     const deltaTime = elapsedTime - previousTime
     previousTime = elapsedTime
+
+    console.log(elapsedTime)
+
 
     controls.update()
 
@@ -254,11 +260,11 @@ export default function Home() {
       </div>
       <p className='text-2xl font-semibold text-gray-600 mt-10 text-center mx-auto'>Discover more about me</p>
 
-      <div className='flex flex-row'>
-        <div className='w-1/2'>
+      <div>
+        <div>
           <p>Hey</p>
         </div>
-        <canvas id='room' className='mx-auto w-1/2'/>
+        <canvas id='room' className='mx-auto'/>
       </div>
     </div>
   )
