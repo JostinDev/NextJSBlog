@@ -5,15 +5,15 @@ import * as THREE from "three";
 import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
 import {useEffect} from "react";
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls"
+import Stats from 'stats.js'
 
 
 export default function Home() {
 
   let camera, scene, renderer, controls;
   let sizes
-  let previousTime = 0
-  const clock = new THREE.Clock()
   const roomGroup = new THREE.Group()
+  let stats
 
   useEffect(() => {
     init();
@@ -46,6 +46,11 @@ export default function Home() {
 
   function init() {
 
+    stats = new Stats();
+    stats.showPanel( 1 ); // 0: fps, 1: ms, 2: mb, 3+: custom
+
+    document.body.appendChild( stats.dom );
+
     const container = document.getElementById('container');
 
     sizes = {
@@ -55,7 +60,7 @@ export default function Home() {
 
     resize()
 
-    camera = new THREE.PerspectiveCamera( 50, sizes.width / sizes.height, 0.01, 100 );
+    camera = new THREE.PerspectiveCamera( 50, sizes.width / sizes.height, 0.01, 50 );
     camera.position.x = 18;
     camera.position.y = 8;
     camera.position.z = -13;
@@ -198,14 +203,11 @@ export default function Home() {
 
   function animation() {
 
-    const elapsedTime = clock.getElapsedTime()
-    const deltaTime = elapsedTime - previousTime
-    previousTime = elapsedTime
-
+    stats.begin();
     controls.update()
 
     renderer.render( scene, camera );
-
+    stats.end();
   }
 
   return (
@@ -216,10 +218,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <div className='flex flex-row mt-20'>
-          <div className='w-1/2'>
-            <p className='text-6xl text-gray-800'>Hello! I Am</p>
-            <p className='text-6xl font-semibold py-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>Justin Nydegger</p>
+        <div className='flex flex-row mt-20 px-4'>
+          <div className='w-full md:w-3/5'>
+            <p className='text-4xl md:text-6xl text-gray-800'>Hello! I Am</p>
+            <p className='text-4xl md:text-6xl font-semibold py-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>Justin Nydegger</p>
             <p className='text-gray-600 mt-5 text-justify'>
               I am a swiss software engineer who seeks to create beautiful web experiences. I am a passionate learner
               and a hard worker. I consider myself as a determined person. I always try to improve myself and other
@@ -245,17 +247,40 @@ export default function Home() {
               </p>
             </Link>
           </div>
-          <div className='w-1/2 text-center'>
+          <div className='w-0 md:w-2/5 md:pl-5 md:align-middle lg:w-1/2 invisible md:visible text-center'>
             <Image src='/images/home/profile2.png' height={450} width={450} layout={"intrinsic"} alt={'Profile Picture'}/>
           </div>
 
         </div>
       </div>
-      <p className='text-2xl font-semibold text-gray-600 mt-10 text-center mx-auto'>Discover more about me</p>
-
+      <p className='text-2xl md:text-3xl mb-10 font-semibold text-gray-600 mt-10 text-center mx-auto'>Discover more about me</p>
       <div>
-        <div>
-          <p>Hey</p>
+        <div className='flex flex-wrap px-4 mx-auto'>
+          <div className='w-2/5 px-2'>
+            <p className='text-2xl font-semibold py-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>
+              Education
+            </p>
+            <p>Master of Science HES-SO en Integrated Innovation for Product and Business Development (2021 - 2023)</p>
+            <p>Bachelor in Computer science and communication systems (2018 - 2021)</p>
+            <p>Federal Certificate of Vocational Education and Training (2013 - 2017)</p>
+          </div>
+          <div className='w-2/5 px-2'>
+            <p className='text-2xl font-semibold py-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>
+              Professional experience
+            </p>
+            <p>Application developer for Geodis - Dublin (2018 - 7 months)</p>
+            <p>Freelancer (2013 - now)</p>
+            <p>Apprentice application developer for HEAI - Switzerland  (2013 - 2017)</p>
+          </div>
+          <div className='w-1/5 px-2'>
+          <p className='text-2xl font-semibold py-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>
+              Languages
+            </p>
+            <p>French - mother tongue</p>
+            <p>English - C1</p>
+            <p>Spanish - B2</p>
+            <p>German - B2</p>
+          </div>
         </div>
         <canvas id='room' className='mx-auto'/>
       </div>
