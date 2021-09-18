@@ -184,8 +184,13 @@ export default function Home() {
     // Create the controls
     controls = new OrbitControls(camera, canvas)
     controls.enableDamping = true
-    controls.rotateSpeed *= -0.5
+    controls.rotateSpeed *= 0.5
     controls.enableZoom = false
+    controls.maxAzimuthAngle = -2.9
+    controls.minAzimuthAngle = 1.4
+    controls.maxPolarAngle = 1.4
+    controls.minPolarAngle = 0.5
+    controls.screenSpacePanning = false
 
     renderer = new THREE.WebGLRenderer({
       canvas: canvas,
@@ -205,9 +210,6 @@ export default function Home() {
     const elapsedTime = clock.getElapsedTime()
     const deltaTime = elapsedTime - previousTime
     previousTime = elapsedTime
-
-    console.log(elapsedTime)
-
 
     controls.update()
 
