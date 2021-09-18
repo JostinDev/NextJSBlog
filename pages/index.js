@@ -78,22 +78,22 @@ export default function Home() {
     // Load the world and the animals
     const textureLoader = new THREE.TextureLoader()
 
-    const wallsLoaded = textureLoader.load('textures/Walls.jpg')
+    const wallsLoaded = textureLoader.load('textures/Walls1.jpg')
     wallsLoaded.flipY = false
     wallsLoaded.encoding = THREE.sRGBEncoding
     const wallsTexture = new THREE.MeshBasicMaterial({map: wallsLoaded})
 
-    const shelfLoaded = textureLoader.load('textures/Shelf.jpg')
+    const shelfLoaded = textureLoader.load('textures/Shelf2.jpg')
     shelfLoaded.flipY = false
     shelfLoaded.encoding = THREE.sRGBEncoding
     const shelfTexture = new THREE.MeshBasicMaterial({map: shelfLoaded})
 
-    const deskLoaded = textureLoader.load('textures/Desk.jpg')
+    const deskLoaded = textureLoader.load('textures/Desk2.jpg')
     deskLoaded.flipY = false
     deskLoaded.encoding = THREE.sRGBEncoding
     const deskTexture = new THREE.MeshBasicMaterial({map: deskLoaded})
 
-    const decorationLoaded = textureLoader.load('textures/Decoration.jpg')
+    const decorationLoaded = textureLoader.load('textures/Decoration2.jpg')
     decorationLoaded.flipY = false
     decorationLoaded.encoding = THREE.sRGBEncoding
     const decorationTexture = new THREE.MeshBasicMaterial({map: decorationLoaded})
@@ -103,7 +103,7 @@ export default function Home() {
     livingRoomLoaded.encoding = THREE.sRGBEncoding
     const livingRoomTexture = new THREE.MeshBasicMaterial({map: livingRoomLoaded})
 
-    const sofaLoaded = textureLoader.load('textures/Sofa.jpg')
+    const sofaLoaded = textureLoader.load('textures/Sofa1.jpg')
     sofaLoaded.flipY = false
     sofaLoaded.encoding = THREE.sRGBEncoding
     const sofaTexture = new THREE.MeshBasicMaterial({map: sofaLoaded})
