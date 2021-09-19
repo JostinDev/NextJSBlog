@@ -104,7 +104,6 @@ export default function Home() {
     const sofaTexture = new THREE.MeshBasicMaterial({map: sofaLoaded})
 
     const gltfLoader = new GLTFLoader()
-
     const dracoLoader = new DRACOLoader();
     dracoLoader.setDecoderPath( '/draco/' );
     dracoLoader.preload();
