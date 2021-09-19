@@ -36,11 +36,14 @@ export default function Home() {
 
   function resize() {
 
-    sizes.width = container.clientWidth
-    if(container.clientWidth > 1000)
-      sizes.height = 1000
-    else
-      sizes.height = container.clientWidth
+    try {
+      sizes.width = container.clientWidth
+
+      if(container.clientWidth > 1000)
+        sizes.height = 1000
+      else
+        sizes.height = container.clientWidth
+    } catch {}
   }
 
   function init() {
@@ -224,7 +227,7 @@ export default function Home() {
           <div className='w-full md:w-3/5'>
             <p className='text-4xl md:text-6xl text-gray-800'>Hello! I Am</p>
             <p className='text-4xl md:text-6xl font-semibold py-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>Justin Nydegger</p>
-            <p className='text-gray-600 mt-5 text-justify'>
+            <p className='text-gray-700 mt-5 text-justify'>
               I am a swiss software engineer who seeks to create beautiful web experiences. I am a passionate learner
               and a hard worker. I consider myself as a determined person. I always try to improve myself and other
               people’s lives by creating tools such as
@@ -257,8 +260,8 @@ export default function Home() {
       </div>
       <p className='text-2xl md:text-3xl mb-10 font-semibold text-gray-600 mt-10 text-center mx-auto'>Discover more about me</p>
       <div>
-        <div className='flex flex-wrap px-4 mx-auto'>
-          <div className='w-2/5 px-2'>
+        <div className='flex flex-wrap px-4 mx-auto text-gray-700'>
+          <div className='w-full md:w-2/5 px-2 mb-3'>
             <p className='text-2xl font-semibold py-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>
               Education
             </p>
@@ -266,7 +269,7 @@ export default function Home() {
             <p>Bachelor in Computer science and communication systems (2018 - 2021)</p>
             <p>Federal Certificate of Vocational Education and Training (2013 - 2017)</p>
           </div>
-          <div className='w-2/5 px-2'>
+          <div className='w-full md:w-2/5 px-2 mb-3'>
             <p className='text-2xl font-semibold py-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>
               Professional experience
             </p>
@@ -274,8 +277,8 @@ export default function Home() {
             <p>Freelancer (2013 - now)</p>
             <p>Apprentice application developer for HEAI - Switzerland  (2013 - 2017)</p>
           </div>
-          <div className='w-1/5 px-2'>
-          <p className='text-2xl font-semibold py-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>
+          <div className='w-full md:w-1/5 px-2 mb-3'>
+            <p className='text-2xl font-semibold py-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>
               Languages
             </p>
             <p>French - mother tongue</p>
@@ -283,7 +286,15 @@ export default function Home() {
             <p>Spanish - B2</p>
             <p>German - B2</p>
           </div>
+          <div className='w-full md:w-1/5 px-2 mb-3'>
+            <p className='text-2xl font-semibold py-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>
+              Hobbies
+            </p>
+            <p>Sport, Coding, Cooking, Learning, Traveling, Video games</p>
+          </div>
         </div>
+        <p className='text-2xl md:text-3xl mb-4 font-semibold text-gray-600 mt-10 text-center mx-auto'>This is my room</p>
+        <p className='text-gray-500 text-sm text-center mx-auto'>Drag & drop to explore it. The objects express what I like</p>
         <canvas id='room' className='mx-auto'/>
       </div>
     </div>

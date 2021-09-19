@@ -17,28 +17,35 @@ export default function Projects() {
       title: 'SwissMeca',
       description: 'Website for a company which mission is to develop and supply innovative mechanical and mechatronic solutions to industrial customers',
       img: '/images/projects/swissMeca.png',
-      date: 'March 21, 2021',
+      date: 'February 05, 2021',
       link: 'https://www.swissmeca.ch/?lang=en'
     },
     {
       title: 'Cave aux hirondelles',
       description: 'E-commerce website of a winemaker wishing to promote his products',
       img: '/images/projects/caveAuxHirondelles.png',
-      date: 'March 21, 2021',
+      date: 'September 28, 2020',
       link: 'https://caveauxhirondelles.ch/'
+    },
+    {
+      title: 'Acer Jardin',
+      description: 'Website of a gardener who wants to create an online presence',
+      img: '/images/projects/acer.png',
+      date: 'February 14, 2020',
+      link: 'https://acer-jardin.ch/'
     },
     {
       title: 'Andy Natural',
       description: 'E-commerce website of a freelance photographer who wants to showcase his work',
       img: '/images/projects/andyNatural.png',
-      date: 'March 21, 2021',
+      date: 'July 15, 2019',
       link: 'https://andy-natural.com/'
     },
     {
       title: 'Maternelle Les petits lapins',
       description: 'Website for a nursery school in the region of Fribourg',
       img: '/images/projects/maternelle.png',
-      date: 'March 21, 2021',
+      date: 'April 18, 2019',
       link: 'https://maternellelespetitslapins.ch/'
     },
   ]
