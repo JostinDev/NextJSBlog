@@ -6,6 +6,7 @@ import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
 import {useEffect} from "react";
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls"
 import Stats from 'stats.js'
+import {DRACOLoader} from "three/examples/jsm/loaders/DRACOLoader";
 
 
 export default function Home() {
@@ -78,22 +79,22 @@ export default function Home() {
     // Load the world and the animals
     const textureLoader = new THREE.TextureLoader()
 
-    const wallsLoaded = textureLoader.load('textures/Walls1.jpg')
+    const wallsLoaded = textureLoader.load('textures/Walls.jpg')
     wallsLoaded.flipY = false
     wallsLoaded.encoding = THREE.sRGBEncoding
     const wallsTexture = new THREE.MeshBasicMaterial({map: wallsLoaded})
 
-    const shelfLoaded = textureLoader.load('textures/Shelf2.jpg')
+    const shelfLoaded = textureLoader.load('textures/Shelf.jpg')
     shelfLoaded.flipY = false
     shelfLoaded.encoding = THREE.sRGBEncoding
     const shelfTexture = new THREE.MeshBasicMaterial({map: shelfLoaded})
 
-    const deskLoaded = textureLoader.load('textures/Desk2.jpg')
+    const deskLoaded = textureLoader.load('textures/Desk.jpg')
     deskLoaded.flipY = false
     deskLoaded.encoding = THREE.sRGBEncoding
     const deskTexture = new THREE.MeshBasicMaterial({map: deskLoaded})
 
-    const decorationLoaded = textureLoader.load('textures/Decoration2.jpg')
+    const decorationLoaded = textureLoader.load('textures/Decoration.jpg')
     decorationLoaded.flipY = false
     decorationLoaded.encoding = THREE.sRGBEncoding
     const decorationTexture = new THREE.MeshBasicMaterial({map: decorationLoaded})
@@ -103,7 +104,7 @@ export default function Home() {
     livingRoomLoaded.encoding = THREE.sRGBEncoding
     const livingRoomTexture = new THREE.MeshBasicMaterial({map: livingRoomLoaded})
 
-    const sofaLoaded = textureLoader.load('textures/Sofa1.jpg')
+    const sofaLoaded = textureLoader.load('textures/Sofa.jpg')
     sofaLoaded.flipY = false
     sofaLoaded.encoding = THREE.sRGBEncoding
     const sofaTexture = new THREE.MeshBasicMaterial({map: sofaLoaded})
@@ -112,8 +113,14 @@ export default function Home() {
 
     const gltfLoader = new GLTFLoader()
 
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath( '/draco/' );
+    dracoLoader.preload();
+
+    gltfLoader.setDRACOLoader(dracoLoader)
+
     gltfLoader.load(
-      'models/walls.glb',
+      'models/draco/walls.glb',
       (gltf) => {
         gltf.scene.traverse((child) => {
           child.material = wallsTexture
@@ -123,7 +130,7 @@ export default function Home() {
     )
 
     gltfLoader.load(
-      'models/shelf.glb',
+      'models/draco/shelf.glb',
       (gltf) => {
         gltf.scene.traverse((child) => {
           child.material = shelfTexture
@@ -133,7 +140,7 @@ export default function Home() {
     )
 
     gltfLoader.load(
-      'models/desk.glb',
+      'models/draco/desk.glb',
       (gltf) => {
         gltf.scene.traverse((child) => {
           child.material = deskTexture
@@ -143,7 +150,7 @@ export default function Home() {
     )
 
     gltfLoader.load(
-      'models/decoration.glb',
+      'models/draco/decoration.glb',
       (gltf) => {
         gltf.scene.traverse((child) => {
           child.material = decorationTexture
@@ -153,7 +160,7 @@ export default function Home() {
     )
 
     gltfLoader.load(
-      'models/livingRoom.glb',
+      'models/draco/livingRoom.glb',
       (gltf) => {
         gltf.scene.traverse((child) => {
           child.material = livingRoomTexture
@@ -163,7 +170,7 @@ export default function Home() {
     )
 
     gltfLoader.load(
-      'models/sofa.glb',
+      'models/draco/sofa.glb',
       (gltf) => {
         gltf.scene.traverse((child) => {
           child.material = sofaTexture
