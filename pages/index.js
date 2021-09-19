@@ -214,7 +214,7 @@ export default function Home() {
         <div className='flex flex-row mt-20 px-4'>
           <div className='w-full md:w-3/5'>
             <p className='text-4xl md:text-6xl text-gray-800'>Hello! I Am</p>
-            <p className='text-4xl md:text-6xl font-semibold py-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>Justin Nydegger</p>
+            <p className='text-4xl md:text-6xl font-semibold py-3 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>Justin Nydegger</p>
             <p className='text-gray-700 mt-5 text-justify'>
               I am a swiss software engineer who seeks to create beautiful web experiences. I am a passionate learner
               and a hard worker. I consider myself as a determined person. I always try to improve myself and other
