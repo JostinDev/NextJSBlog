@@ -211,7 +211,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <div className='flex flex-row mt-20 px-4'>
+        <div className='flex flex-row mt-10 px-4'>
           <div className='w-full md:w-3/5'>
             <p className='text-4xl md:text-6xl text-gray-800'>Hello! I Am</p>
             <p className='text-4xl md:text-6xl font-semibold py-3 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>Justin Nydegger</p>
