@@ -32,8 +32,6 @@ export default function Home() {
       renderer.setSize(sizes.width, sizes.height)
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     })
-
-
   },[]);
 
   function resize() {
@@ -75,7 +73,6 @@ export default function Home() {
     light.position.set( 2, 2, 3 );
     scene.add( light );
 
-
     // Load the world and the animals
     const textureLoader = new THREE.TextureLoader()
 
@@ -108,8 +105,6 @@ export default function Home() {
     sofaLoaded.flipY = false
     sofaLoaded.encoding = THREE.sRGBEncoding
     const sofaTexture = new THREE.MeshBasicMaterial({map: sofaLoaded})
-
-
 
     const gltfLoader = new GLTFLoader()
 
