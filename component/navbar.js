@@ -2,55 +2,22 @@ import React, {useEffect, useState} from 'react'
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
-import { useRouter } from "next/router";
-
+import { useRouter } from "next/router"
+import { observer } from 'mobx-react-lite'
+import { useStores } from '../hooks/use-stores'
 
 function classNames (...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-function Navbar () {
+const Navbar = observer(function () {
 
+  const { navStore } = useStores()
   const router = useRouter();
 
-  const nav = [
-    { id: 0, name: 'Home', href: '/', current: true },
-    { id: 1, name: 'Projects', href: '/projects', current: false },
-    { id: 2, name: 'Blog', href: '/blog', current: false }
-  ]
-
-  const [navigation, setNavigation] = useState(nav)
-
   useEffect(() => {
-    // Update the document title using the browser API
-   console.log(router.pathname)
-    switch (router.pathname) {
-      case '/':
-        changeFocus(nav[0])
-        break;
-      case '/projects':
-        changeFocus(nav[1])
-        break;
-      case '/blog':
-        changeFocus(nav[2])
-        break;
-      case '/posts/[id]':
-        changeFocus(nav[2])
-        break;
-    }
+    navStore.routerPath(router.pathname)
   },[]);
-
-
-  function changeFocus (item) {
-    const tempNav = [...nav]
-
-    for (const key in tempNav) {
-      tempNav[key].current = false
-    }
-    tempNav[item.id].current = true
-
-    setNavigation(tempNav)
-  }
 
   return (
     <Disclosure as='nav' className='border-b bg-white border-gray-300'>
@@ -73,14 +40,14 @@ function Navbar () {
                 </div>
                 <div className='hidden sm:block sm:ml-6'>
                   <div className='flex space-x-4'>
-                    {navigation.map((item) => (
+                    {navStore.getNav().map((item) => (
                       <Link
                         key={item.name}
                         href={item.href}
                         passHref
                       >
                         <span
-                            onClick={() => changeFocus(item)}
+                            onClick={() => navStore.routerPath(item.href)}
                             className={classNames(
                             item.current ?
                               'py-1 px-1 text-white rounded cursor-pointer bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:from-purple-300 hover:via-pink-400 hover:to-red-400'
@@ -100,14 +67,14 @@ function Navbar () {
 
           <Disclosure.Panel className='sm:hidden'>
             <div className='px-2 pt-2 pb-3 space-y-1'>
-              {navigation.map((item) => (
+              {navStore.getNav().map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   passHref
                 >
                   <p
-                      onClick={() => changeFocus(item)}
+                    onClick={() => navStore.routerPath(item.href)}
                       className={classNames(
                         item.current ?
                           'py-1 px-1 text-white rounded cursor-pointer bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:from-purple-300 hover:via-pink-400 hover:to-red-400'
@@ -126,6 +93,6 @@ function Navbar () {
       )}
     </Disclosure>
   )
-}
+})
 
 export default Navbar

@@ -1,14 +1,17 @@
 import Head from 'next/head'
 import Image from "next/image"
-import Link from "next/link";
-import * as THREE from "three";
-import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
-import {useEffect} from "react";
+import Link from "next/link"
+import * as THREE from "three"
+import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader"
+import {useEffect} from "react"
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls"
-import {DRACOLoader} from "three/examples/jsm/loaders/DRACOLoader";
+import {DRACOLoader} from "three/examples/jsm/loaders/DRACOLoader"
+import { useStores } from '../hooks/use-stores'
 
 
 export default function Home() {
+
+  const { navStore } = useStores()
 
   let camera, scene, renderer, controls;
   let sizes
@@ -16,7 +19,6 @@ export default function Home() {
 
   useEffect(() => {
     init();
-
     //Update the sizes when the screen is resized. If it's not done, the size of the simulation is fixed
     window.addEventListener('resize', () => {
 
@@ -234,7 +236,7 @@ export default function Home() {
               </span>
             </p>
             <Link href='/projects' passHref>
-              <p className='py-3 px-4 mt-5 rounded text-white font-semibold cursor-pointer inline-block bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:from-purple-300 hover:via-pink-400 hover:to-red-400'>
+              <p onClick={()=>navStore.routerPath('/projects')} className='py-3 px-4 mt-5 rounded text-white font-semibold cursor-pointer inline-block bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:from-purple-300 hover:via-pink-400 hover:to-red-400'>
                See my projects
               </p>
             </Link>
