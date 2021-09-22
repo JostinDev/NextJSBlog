@@ -254,7 +254,6 @@ export default function Home() {
             <p className='text-2xl font-semibold py-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>
               Education
             </p>
-            <p>Master of Science HES-SO en Integrated Innovation for Product and Business Development (2021 - 2023)</p>
             <p>Bachelor in Computer science and communication systems (2018 - 2021)</p>
             <p>Federal Certificate of Vocational Education and Training (2013 - 2017)</p>
           </div>

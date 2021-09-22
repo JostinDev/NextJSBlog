@@ -22,7 +22,7 @@ export async function getStaticPaths() {
 export default function Post({ postData }) {
     return (
         <Layout>
-            <div className='container mx-auto max-w-screen-lg pt-5 px-4 md:px-20'>
+            <div className='container mx-auto max-w-screen-lg pt-5 pb-10 px-4 md:px-20'>
                 <div className='md:absolute block md:-ml-16 ml-0 my-2'>
                     <Link href={'/blog'} passHref>
                         <p className='p-2 cursor-pointer w-max rounded-full text-white bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:from-purple-300 hover:via-pink-400 hover:to-red-400'>
