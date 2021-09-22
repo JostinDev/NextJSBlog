@@ -4,7 +4,8 @@ class NavStore {
     nav = [
       { id: 0, name: 'Home', href: '/', current: true },
       { id: 1, name: 'Projects', href: '/projects', current: false },
-      { id: 2, name: 'Blog', href: '/blog', current: false }
+      { id: 2, name: 'Blog', href: '/blog', current: false },
+      { id: 3, name: 'Renders', href: '/renders', current: false }
     ]
     constructor () {
       this.routerPath('/home')
@@ -25,6 +26,9 @@ class NavStore {
         case '/posts/[id]':
           this.changeFocus(this.nav[2])
           break;
+        case '/renders':
+        this.changeFocus(this.nav[3])
+        break;
     }
   }
 
