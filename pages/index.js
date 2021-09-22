@@ -219,8 +219,8 @@ export default function Home() {
             <p className='text-4xl md:text-6xl font-semibold py-3 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>Justin Nydegger</p>
             <p className='text-gray-700 mt-5 text-justify'>
               I am a swiss software engineer who seeks to create beautiful web experiences. I am a passionate learner
-              and a hard worker. I consider myself as a determined person. I always try to improve myself and other
-              people’s lives by creating tools such as
+              and a determined person. Always trying to improve myself and other
+              people’s lives, I created tools such as
               <span className='cursor-pointer font-semibold p-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:from-purple-300 hover:via-pink-400 hover:to-red-400'>
                 <a target='_blank' rel='noreferrer' href='https://embrave.app/'>Embrave</a>
               </span>. My free time is fully dedicated to trying out and learning new skills.
