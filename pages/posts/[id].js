@@ -32,7 +32,7 @@ export default function Post({ postData }) {
                         </p>
                     </Link>
                 </div>
-                <h1 className='text-6xl'>{postData.title}</h1>
+                <h1 className='text-2xl md:text-4xl lg:text-5xl xl:text-6xl'>{postData.title}</h1>
                 <p className='text-gray-600 pt-4'>{postData.date}</p>
                 <Markdown className='markdown pt-10 text-justify'>{postData.content}</Markdown>
             </div>
