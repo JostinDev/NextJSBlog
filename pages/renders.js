@@ -2,9 +2,15 @@ import Head from 'next/head'
 import Project from "../component/project";
 import Render from "../component/render";
 
-export default function Projects() {
+export default function Renders() {
 
   const renderData = [
+    {
+      title: 'CubeWorld',
+      img: '/images/renders/cube.png',
+      date: 'September 2021',
+      link: 'https://www.youtube.com/watch?v=IPeA2H-Yy6M&ab_channel=Jostin'
+    },
     {
       title: 'My room',
       img: '/images/renders/room.png',
