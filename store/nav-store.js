@@ -8,7 +8,7 @@ class NavStore {
       { id: 3, name: 'Renders', href: '/renders', current: false }
     ]
     constructor () {
-      this.routerPath('/home')
+      this.routerPath('/')
       makeAutoObservable(this)
     }
 
