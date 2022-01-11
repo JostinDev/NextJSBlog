@@ -6,10 +6,16 @@ export default function Renders() {
 
   const renderData = [
     {
-      title: 'CubeWorld',
-      img: '/images/renders/cube.png',
-      date: 'September 2021',
-      link: 'https://www.youtube.com/watch?v=IPeA2H-Yy6M&ab_channel=Jostin'
+      title: 'Outer Wilds',
+      img: '/images/renders/outerWilds.png',
+      date: 'January 2022',
+      link: 'https://www.youtube.com/watch?v=jksrXT73zCQ&ab_channel=Jostin'
+    },
+    {
+      title: 'Donut',
+      img: '/images/renders/donutGuru.png',
+      date: 'December 2021',
+      link: 'https://www.youtube.com/watch?v=vfotM4Artls&ab_channel=Jostin'
     },
     {
       title: 'My room',

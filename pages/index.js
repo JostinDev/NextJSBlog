@@ -261,6 +261,7 @@ export default function Home() {
             <p className='text-2xl font-semibold py-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>
               Professional experience
             </p>
+            <p>Software engineer for Adnovum (December 2021 - now)</p>
             <p>Application developer for Geodis - Dublin (2018 - 7 months)</p>
             <p>Freelancer (2013 - now)</p>
             <p>Apprentice application developer for HEAI - Switzerland  (2013 - 2017)</p>
