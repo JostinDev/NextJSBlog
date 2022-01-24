@@ -6,6 +6,12 @@ export default function Renders() {
 
   const renderData = [
     {
+      title: 'Sci-fi Loops',
+      img: '/images/renders/loops.png',
+      date: 'January 2022',
+      link: 'https://www.youtube.com/watch?v=f82_KUMPwcI'
+    },
+    {
       title: 'Outer Wilds',
       img: '/images/renders/outerWilds.png',
       date: 'January 2022',
