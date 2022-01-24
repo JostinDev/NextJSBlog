@@ -6,6 +6,12 @@ export default function Renders() {
 
   const renderData = [
     {
+      title: 'Under the sea',
+      img: '/images/renders/seaTentacles.png',
+      date: 'January 2022',
+      link: 'https://youtu.be/yRck7LdBuKc'
+    },
+    {
       title: 'Sci-fi Loops',
       img: '/images/renders/loops.png',
       date: 'January 2022',
