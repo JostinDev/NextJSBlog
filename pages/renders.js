@@ -1,10 +1,27 @@
 import Head from 'next/head'
-import Project from "../component/project";
 import Render from "../component/render";
 
 export default function Renders() {
 
   const renderData = [
+    {
+      title: 'Happy Easter',
+      img: '/images/renders/happyEaster.jpeg',
+      date: 'March 2022',
+      link: 'https://youtu.be/NKdtVtZ2gI4'
+    },
+    {
+      title: 'Infinite journey',
+      img: '/images/renders/infiniteJourney.jpeg',
+      date: 'February 2022',
+      link: 'https://youtu.be/UK4OzTiXk_8'
+    },
+    {
+      title: 'Simple marble',
+      img: '/images/renders/simpleMarble.jpeg',
+      date: 'January 2022',
+      link: 'https://youtu.be/xomO2GqZmVo'
+    },
     {
       title: 'Under the sea',
       img: '/images/renders/seaTentacles.png',
@@ -28,6 +45,12 @@ export default function Renders() {
       img: '/images/renders/donutGuru.png',
       date: 'December 2021',
       link: 'https://www.youtube.com/watch?v=vfotM4Artls&ab_channel=Jostin'
+    },
+    {
+      title: 'Cube world',
+      img: '/images/renders/cube.png',
+      date: 'November 2021',
+      link: 'https://www.youtube.com/watch?v=IPeA2H-Yy6M&ab_channel=Jostin'
     },
     {
       title: 'My room',
