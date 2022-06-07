@@ -5,6 +5,30 @@ export default function Renders() {
 
   const renderData = [
     {
+      title: 'Black Swan',
+      img: '/images/renders/blackSwan.png',
+      date: 'June 2022',
+      link: 'https://youtube.com/shorts/cuA9zYhzz-s'
+    },
+    {
+      title: 'Ocean feels',
+      img: '/images/renders/oceanFeels.png',
+      date: 'May 2022',
+      link: 'https://youtube.com/shorts/tp5_Jyq57qg'
+    },
+    {
+      title: 'Backrooms',
+      img: '/images/renders/backrooms.png',
+      date: 'May 2022',
+      link: 'https://youtube.com/shorts/ZJI_BDFPRws'
+    },
+    {
+      title: 'Wood Marble',
+      img: '/images/renders/woodMarble.png',
+      date: 'April 2022',
+      link: 'https://www.youtube.com/watch?v=O569I4sHh4E&ab_channel=Jostin'
+    },
+    {
       title: 'Happy Easter',
       img: '/images/renders/happyEaster.jpeg',
       date: 'March 2022',
