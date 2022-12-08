@@ -5,6 +5,24 @@ export default function Renders() {
 
   const renderData = [
     {
+      title: 'Morning lift',
+      img: '/images/renders/morningLift.png',
+      date: 'October 2022',
+      link: 'https://www.youtube.com/watch?v=myu3X4HxaMM&ab_channel=Lejostin'
+    },
+    {
+      title: 'Moving Meditation',
+      img: '/images/renders/movingMeditation.png',
+      date: 'September 2022',
+      link: 'https://www.youtube.com/watch?v=xazhC13XDdY&ab_channel=Lejostin'
+    },
+    {
+      title: 'Mountain sunrise',
+      img: '/images/renders/mountainSunrise.png',
+      date: 'July 2022',
+      link: 'https://www.youtube.com/watch?v=0o6b_miA0g0&ab_channel=Lejostin'
+    },
+    {
       title: 'Black Swan',
       img: '/images/renders/blackSwan.png',
       date: 'June 2022',
