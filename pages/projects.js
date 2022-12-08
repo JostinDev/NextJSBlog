@@ -5,6 +5,13 @@ export default function Projects() {
 
   const projectData = [
     {
+      title: 'One year of learning 3D',
+      description: 'I picked 3D animation as a new hobby in 2022. Here is my progression so far',
+      img: '/images/projects/blender2022.jpeg',
+      date: 'october 18 , 2022',
+      link: 'https://www.youtube.com/watch?v=fa96qAMgfE0&ab_channel=Lejostin'
+    },
+    {
       title: 'Website VR visualisation in Three.js',
       description: 'My Bachelor\'s final work. The goal was to create a world in VR and represent the data of an existing website inside it',
       img: '/images/projects/TB.png',
