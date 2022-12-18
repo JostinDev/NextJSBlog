@@ -5,6 +5,12 @@ export default function Renders() {
 
   const renderData = [
     {
+      title: 'Place To Bee',
+      img: '/images/renders/placetobee.png',
+      date: 'November 2022',
+      link: 'https://www.instagram.com/p/CmQ6TICqNOp/'
+    },
+    {
       title: 'Morning lift',
       img: '/images/renders/morningLift.png',
       date: 'October 2022',
