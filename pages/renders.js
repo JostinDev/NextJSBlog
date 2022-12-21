@@ -5,6 +5,12 @@ export default function Renders() {
 
   const renderData = [
     {
+      title: 'Lonely Mountain',
+      img: '/images/renders/lonelyMountain.png',
+      date: 'December 2022',
+      link: 'https://www.youtube.com/watch?v=ft-J7tZW6ks&ab_channel=Lejostin'
+    },
+    {
       title: 'Place To Bee',
       img: '/images/renders/placetobee.png',
       date: 'November 2022',
