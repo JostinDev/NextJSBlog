@@ -5,7 +5,7 @@ export default function Renders() {
 
   const renderData = [
     {
-      title: 'Endless Engine Render Challenge',
+      title: 'Endless Engine',
       img: '/images/renders/endlessEngine.png',
       date: 'March 2023',
       link: 'https://www.youtube.com/watch?v=AfIBZQt8M1k&ab_channel=Lejostin'
