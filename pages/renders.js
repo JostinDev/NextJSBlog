@@ -5,6 +5,12 @@ export default function Renders() {
 
   const renderData = [
     {
+      title: 'Boss Fight',
+      img: '/images/renders/bossFight.png',
+      date: 'August 2023',
+      link: 'https://www.youtube.com/watch?v=BstDXSYu5eI'
+    },
+    {
       title: 'Endless Engine',
       img: '/images/renders/endlessEngine.png',
       date: 'March 2023',
