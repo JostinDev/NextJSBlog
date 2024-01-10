@@ -17,15 +17,15 @@ export default function Home() {
 
 
   return (
-    <div className='container mx-auto' id='container'>
+    <div className='container mx-auto pb-12' id='container'>
       <Head>
         <title>Justin Nydegger</title>
         <meta name="description" content="Personal Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className='flex gap-14 rounded-[40px] bg-black p-6 w-full mx-auto max-w-[1400px] min-h-[1000px] absolute top-6 bottom-6 left-0 right-0'>
-        <div className='w-[500px] rounded-l-2xl bg-center bg-no-repeat bg-cover p-8' style={{backgroundImage: `url(${just1test2.src})`}}>
+      <div className='flex gap-14 rounded-[40px] bg-black p-6 w-full mx-auto max-w-[1600px] min-h-[1000px] relative top-6 bottom-6 left-0 right-0'>
+        <div className='w-[500px] rounded-l-2xl rounded-r-sm bg-center bg-no-repeat bg-cover p-8' style={{backgroundImage: `url(${just1test2.src})`}}>
           <p className='text-white text-4xl'>Justin</p>
         </div>
         <div className='flex flex-col flex-1'>
@@ -57,18 +57,23 @@ export default function Home() {
             </div>
 
           </div>
-          <div className='flex flex-1 justify-between pt-10'>
+          <div className='flex flex-1 justify-between pt-10 gap-4'>
+            <div className='flex flex-col flex-1 min-w-0 gap-2'>
+              <h1 className='text-xl text-white'>Projects</h1>
+              <h2 className='text-md text-gray-500'>One year of learning Blender</h2>
+              <h2 className='text-md text-gray-500'>Three.js VR website</h2>
+              <h2 className='text-md text-gray-500'>SwissMeca</h2>
+              <h2 className='text-md text-gray-500'>Cave aux hirondelles</h2>
+              <h2 className='text-md text-gray-500'>Acer Jardin</h2>
+              <h2 className='text-md text-gray-500'>Andy Natural</h2>
+            </div>
             <div className='flex flex-col flex-1 min-w-0'>
-              <h1 className='text-xl text-white'>Contact me</h1>
-              <h2 className='text-lg text-gray-500'>justin@nydegger.me</h2>
+              <h1 className='text-xl text-white'>Renders</h1>
+              <h2 className='text-md text-gray-500'>Three.js VR website</h2>
             </div>
             <div className='flex flex-col flex-1 min-w-0'>
               <h1 className='text-xl text-white'>Projects</h1>
-              <h2 className='text-lg text-gray-500'>Projects</h2>
-            </div>
-            <div className='flex flex-col flex-1 min-w-0'>
-              <h1 className='text-xl text-white'>Projects</h1>
-              <h2 className='text-lg text-gray-500'>Projects</h2>
+              <h2 className='text-md text-gray-500'>Projects</h2>
             </div>
           </div>
         </div>

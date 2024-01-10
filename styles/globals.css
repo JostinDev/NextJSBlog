@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    min-height: 100svh;
+    height: 100%;
+}
+
 @layer base {
     .markdown  h1 {
         @apply text-4xl;
