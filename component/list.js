@@ -12,7 +12,7 @@ export default function List({items, title, seeMoreLink, itemsNumber}) {
                     <ListItem key={index} title={title} link={link}></ListItem>
                 ))}
             </ul>
-          <Link href={seeMoreLink} className='text-md text-gray-500 mt-2 block'>See more...</Link>
+          <Link href={seeMoreLink} className='text-md text-gray-500 mt-2 block hover:text-gray-300 transition'>See more...</Link>
         </div>
     )
 }
