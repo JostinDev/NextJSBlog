@@ -5,6 +5,7 @@ import { useStores } from '../hooks/use-stores'
 import just1test2 from '../public/just1test2.png'
 import projects from "../data/projectData";
 import renders from "../data/renderData";
+import List from "../component/list";
 export default function Home() {
   const { navStore } = useStores()
   useEffect(() => {
@@ -51,19 +52,11 @@ export default function Home() {
 
           </div>
           <div className='flex flex-1 justify-between pt-10 gap-6'>
-            <div className='flex flex-col flex-1 min-w-0 gap-2'>
-              <h1 className='text-xl text-white'>Projects</h1>
-                {projects.data.map(({ title, description, img, date, link }, index) => (
-                  <h2 key={index} className='text-md text-gray-500'>{title}</h2>
-                ))}
-              <Link href={'/projects'} className='text-md text-gray-500'>See more...</Link>
+            <div className='flex flex-col flex-1 min-w-0'>
+              <List itemsNumber={8} seeMoreLink={'/projects'} title={'Projects'} items={projects.data}></List>
             </div>
-            <div className='flex flex-col flex-1 min-w-0 gap-2'>
-              <h1 className='text-xl text-white'>Renders</h1>
-              {renders.data.map(({ title, img, date, link }, index) => (
-                  <h2 key={index} className='text-md text-gray-500'>{title}</h2>
-              ))}
-              <Link href={'/renders'} className='text-md text-gray-500'>See more...</Link>
+            <div className='flex flex-col flex-1 min-w-0'>
+              <List itemsNumber={8} seeMoreLink={'/renders'} title={'Renders'} items={renders.data}></List>
             </div>
             <div className='flex flex-col flex-1 min-w-0'>
               <h1 className='text-xl text-white'>Projects</h1>

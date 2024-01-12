@@ -4,9 +4,8 @@ import renders from "../data/renderData";
 import Link from "next/link";
 import Image from "next/image";
 import arrow from "../public/arrow.svg";
+
 export default function Renders() {
-
-
   return (
     <div className='container mx-auto px-4 lg:px-30 xl:px-48'>
       <Head>
@@ -17,7 +16,7 @@ export default function Renders() {
       <div className='relative'>
         <p className='my-10 text-6xl font-medium text-white'>Renders</p>
         <Link href={'/'} className='text-white absolute top-2 -ml-32'>
-          <Image width={50} height={50} src={arrow}/>
+          <Image width={50} height={50} src={arrow} alt={''}/>
         </Link>
         <div className='flex flex-wrap'>
           {renders.data.map(({ title, img, date, link }, index) => (
