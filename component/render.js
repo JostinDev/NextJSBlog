@@ -7,7 +7,7 @@ export default function Render({title, date, img, link}) {
         <a target="_blank" href={link} rel="noreferrer" className='hover:opacity-60'>
           <Image src={img} height={500} width={500} layout={"intrinsic"} alt={title}/>
         </a>
-        <div className='text-gray-800'>
+        <div className='text-gray-500'>
           <span className='font-semibold'>{title}</span>
           <span className='text-sm'> - {date}</span>
         </div>

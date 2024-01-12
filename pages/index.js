@@ -1,15 +1,10 @@
 import Head from 'next/head'
-import Image from "next/image"
-import Portrait from "/public/portrait.png"
 import Link from "next/link"
 import {useEffect} from "react"
 import { useStores } from '../hooks/use-stores'
-import bg from '../public/portrait.png'
-import justin from '../public/justin.jpg'
-import just1 from '../public/just1.jpg'
-import just1test from '../public/just1test.png'
 import just1test2 from '../public/just1test2.png'
-
+import projects from "../data/projectData";
+import renders from "../data/renderData";
 export default function Home() {
   const { navStore } = useStores()
   useEffect(() => {
@@ -17,19 +12,17 @@ export default function Home() {
 
 
   return (
-    <div className='container mx-auto pb-12' id='container'>
+    <div className='flex gap-10'>
       <Head>
         <title>Justin Nydegger</title>
         <meta name="description" content="Personal Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <div className='flex gap-14 rounded-[40px] bg-black p-6 w-full mx-auto max-w-[1600px] min-h-[1000px] relative top-6 bottom-6 left-0 right-0'>
         <div className='w-[500px] rounded-l-2xl rounded-r-sm bg-center bg-no-repeat bg-cover p-8' style={{backgroundImage: `url(${just1test2.src})`}}>
           <p className='text-white text-4xl'>Justin</p>
         </div>
-        <div className='flex flex-col flex-1'>
-          <div className='flex flex-1 justify-between pt-10 gap-4'>
+        <div className='flex flex-col flex-1 pr-4'>
+          <div className='flex flex-1 justify-between pt-10 gap-6'>
 
             <div className='flex flex-col flex-1 min-w-0 gap-2'>
               <h1 className='text-xl text-white'>Contact me</h1>
@@ -57,19 +50,20 @@ export default function Home() {
             </div>
 
           </div>
-          <div className='flex flex-1 justify-between pt-10 gap-4'>
+          <div className='flex flex-1 justify-between pt-10 gap-6'>
             <div className='flex flex-col flex-1 min-w-0 gap-2'>
               <h1 className='text-xl text-white'>Projects</h1>
-              <h2 className='text-md text-gray-500'>One year of learning Blender</h2>
-              <h2 className='text-md text-gray-500'>Three.js VR website</h2>
-              <h2 className='text-md text-gray-500'>SwissMeca</h2>
-              <h2 className='text-md text-gray-500'>Cave aux hirondelles</h2>
-              <h2 className='text-md text-gray-500'>Acer Jardin</h2>
-              <h2 className='text-md text-gray-500'>Andy Natural</h2>
+                {projects.data.map(({ title, description, img, date, link }, index) => (
+                  <h2 key={index} className='text-md text-gray-500'>{title}</h2>
+                ))}
+              <Link href={'/projects'} className='text-md text-gray-500'>See more...</Link>
             </div>
-            <div className='flex flex-col flex-1 min-w-0'>
+            <div className='flex flex-col flex-1 min-w-0 gap-2'>
               <h1 className='text-xl text-white'>Renders</h1>
-              <h2 className='text-md text-gray-500'>Three.js VR website</h2>
+              {renders.data.map(({ title, img, date, link }, index) => (
+                  <h2 key={index} className='text-md text-gray-500'>{title}</h2>
+              ))}
+              <Link href={'/renders'} className='text-md text-gray-500'>See more...</Link>
             </div>
             <div className='flex flex-col flex-1 min-w-0'>
               <h1 className='text-xl text-white'>Projects</h1>
@@ -78,6 +72,5 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
   )
 }
