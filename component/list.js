@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import ListItem from "./listItem";
 import Link from "next/link";
+import arrow from "../public/arrow.svg";
 
 export default function List({items, title, seeMoreLink, itemsNumber}) {
 
@@ -12,7 +13,12 @@ export default function List({items, title, seeMoreLink, itemsNumber}) {
                     <ListItem key={index} title={title} link={link}></ListItem>
                 ))}
             </ul>
-          <Link href={seeMoreLink} className='text-md text-gray-500 mt-2 block hover:text-gray-300 transition'>See more...</Link>
+          <Link href={seeMoreLink} className='flex gap-2 font-mono text-md text-gray-500 mt-2 hover:text-gray-300 transition'>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 fill-gray-500">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+            See more...
+          </Link>
         </div>
     )
 }
