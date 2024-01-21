@@ -7,13 +7,13 @@ export default function Project({title, description, date, img, link}) {
         <a className={'w-full h-48 relative'} target="_blank" href={link} rel="noreferrer">
           <Image src={img} fill={true} style={{objectFit:"cover"}} alt={title} className='rounded'/>
         </a>
-        <p className='mt-2 text-gray-500 text-sm'>{date}</p>
-          <a target="_blank" href={link} rel="noreferrer">
-              <p className='inline-block cursor-pointer text-lg font-semibold py-1 text-white'>
-                  {title}
-              </p>
-          </a>
-        <p className='text-gray-500'>{description}</p>
+        <p className='mt-2 text-gray-400 text-sm font-mono'>{date}</p>
+        <a target="_blank" href={link} rel="noreferrer">
+            <p className='inline-block cursor-pointer text-lg font-semibold py-1 text-white'>
+                {title}
+            </p>
+        </a>
+        <p className='text-gray-400'>{description}</p>
       </div>
     )
 }
