@@ -45,7 +45,7 @@ export default function Home() {
 								I am a passionate software engineer from Switzerland who seeks to create beautiful web experiences.
 							</p>
 							<p className='text-md text-gray-400 mt-2'>
-								I love creating stuff, I've developed Embrave.
+								I love creating stuff, I&apos;ve developed Embrave.
 							</p>
 							<p className='text-md text-gray-400 mt-2'>
 								My free time is fully dedicated to trying out and learning new skills.
