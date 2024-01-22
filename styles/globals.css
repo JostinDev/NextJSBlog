@@ -6,33 +6,3 @@ html {
     min-height: 100svh;
     height: 100%;
 }
-
-@layer base {
-    .markdown  h1 {
-        @apply text-4xl;
-    }
-    .markdown h2 {
-        @apply text-3xl;
-    }
-    .markdown h3 {
-        @apply text-3xl;
-    }
-    .markdown a {
-        @apply text-blue-600 hover:text-blue-400;
-    }
-    .markdown ul {
-        @apply list-disc;
-        @apply py-2;
-        @apply px-4;
-        @apply m-2;
-    }
-    .markdown ol {
-        @apply list-decimal;
-    }
-    .markdown p {
-        @apply py-3;
-    }
-    .markdown img {
-        @apply mx-auto;
-    }
-}

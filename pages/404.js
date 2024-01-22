@@ -11,9 +11,9 @@ export default function Custom404() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='text-center mt-10'>
-        <p className='text-gray-800 text-5xl font-semibold'>Oh no!</p>
-        <p className='text-2xl text-gray-700'> Ghosty stoled the page you were looking for.</p>
-        <p className='inline-block cursor-pointer text-lg font-semibold py-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:from-purple-300 hover:via-pink-400 hover:to-red-400'>
+        <p className='text-white text-5xl font-semibold'>Oh no!</p>
+        <p className='text-2xl text-white mt-4'>The page you&apos;re looking for doesn&apos;t exist</p>
+        <p className='inline-block cursor-pointer text-lg font-semibold mt-2 text-gray-400'>
           <Link href='/' passHref>
             Go Back Home
           </Link>
