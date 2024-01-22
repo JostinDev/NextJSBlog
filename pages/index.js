@@ -36,10 +36,10 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div className='flex flex-col flex-1 pr-4'>
-					<div className='flex flex-1 justify-between pt-10 gap-6'>
+				<div className='flex flex-col lg:flex-1 lg:pr-4 flex-wrap'>
+					<div className='flex flex-col md:flex-row md:flex-1 justify-between pt-10 gap-6 flex-wrap'>
 
-						<div className='flex flex-col flex-1 min-w-0'>
+						<div className='flex flex-col md:flex-1 min-w-0'>
 							<h1 className='text-xl text-white'>About me</h1>
 							<p className='text-md text-gray-400 mt-2'>
 								I am a passionate software engineer from Switzerland who seeks to create beautiful web experiences.
@@ -54,7 +54,7 @@ export default function Home() {
 								As a very curious person, travelling the world is one of my biggest dreams.
 							</p>
 						</div>
-						<div className='flex flex-col flex-1 min-w-0 gap-2'>
+						<div className='flex flex-col md:flex-1 min-w-0 gap-2'>
 							<h1 className='text-xl text-white'>Education</h1>
 							<ul className='flex flex-col gap-2'>
 								<li className='text-md text-gray-400'>Bachelor in Computer science <span className='block font-mono'>(2018 - 2021)</span></li>
@@ -62,7 +62,7 @@ export default function Home() {
 							</ul>
 						</div>
 
-						<div className='flex flex-col flex-1 min-w-0 gap-2'>
+						<div className='flex flex-col md:flex-1 min-w-0 gap-2'>
 							<h1 className='text-xl text-white'>Professional experience</h1>
 							<ul className='flex flex-col gap-2'>
 								<li className='text-md text-gray-400'>Software engineer at Adnovum <span className='block font-mono'>(2021 - present)</span></li>
@@ -74,15 +74,15 @@ export default function Home() {
 						</div>
 
 					</div>
-					<div className='flex flex-1 justify-between pt-10 gap-6'>
-						<div className='flex flex-col flex-1 min-w-0'>
+					<div className='flex flex-col md:flex-row md:flex-1 justify-between pt-10 gap-6 flex-wrap'>
+						<div className='flex flex-col md:flex-1 min-w-0'>
 							<List itemsNumber={8} seeMoreLink={'/projects'} title={'Projects'} items={projects.data}></List>
 						</div>
-						<div className='flex flex-col flex-1 min-w-0'>
+						<div className='flex flex-col md:flex-1 min-w-0'>
 							<List itemsNumber={8} seeMoreLink={'/renders'} title={'Renders'} items={renders.data}></List>
 						</div>
 
-						<div className='flex flex-col flex-1 min-w-0 gap-2'>
+						<div className='hidden md:flex flex-col md:flex-1 min-w-0 gap-2'>
 							<h1 className='text-xl text-white'>Contact me</h1>
 							<a target={'_blank'} href={'https://x.com/LeJostin'}
 								 className='text-md text-gray-400 hover:text-gray-300 transition'>x.com</a>

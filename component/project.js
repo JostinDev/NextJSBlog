@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Project({title, description, date, img, link}) {
 
     return (
-      <div className='flex  flex-col w-full md:w-1/3 px-4 mb-10'>
+        <div className='flex flex-col w-full md:w-1/2 lg:w-1/3 px-4 mb-10'>
         <a className={'w-full h-48 relative'} target="_blank" href={link} rel="noreferrer">
           <Image src={img} fill={true} style={{objectFit:"cover"}} alt={title} className='rounded'/>
         </a>
