@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import ListItem from "./listItem";
 import Link from "next/link";
 

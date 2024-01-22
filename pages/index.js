@@ -25,13 +25,16 @@ export default function Home() {
 					<Image className='rounded-full' src={justinSquare} width={200} alt={''}></Image>
 					<div className='flex flex-col flex-1 min-w-0 gap-2'>
 						<p className='lg:hidden text-white text-4xl'>Justin Nydegger</p>
-						<div className='flex gap-2 flex-col ml-2'>
-							<a target={'_blank'} href={'https://x.com/LeJostin'}
-								 className='text-md text-gray-400 w-min hover:text-gray-300 transition'>x.com</a>
-							<a target={'_blank'} href={'https://www.instagram.com/justinnydegger/'}
-								 className='text-md text-gray-400 w-min hover:text-gray-300 transition'>instagram.com</a>
-							<a href={"mailto:justin@nydegger.me"}
-								 className='text-md block text-gray-400 w-min hover:text-gray-300 transition rounded-full'>justin@nydegger.me</a>
+						<div className='flex gap-1 flex-col ml-2'>
+							<p className='text-md text-gray-400'>
+								Software engineer
+							</p>
+							<p className='text-md text-gray-400'>
+								Indie Hacker
+							</p>
+							<p className='text-md text-gray-400'>
+								3D enthusiast
+							</p>
 						</div>
 					</div>
 				</div>
