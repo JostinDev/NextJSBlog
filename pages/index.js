@@ -57,18 +57,18 @@ export default function Home() {
 						<div className='flex flex-col md:flex-1 min-w-0 gap-2'>
 							<h1 className='text-xl text-white'>Education</h1>
 							<ul className='flex flex-col gap-2'>
-								<li className='text-md text-gray-400'>Bachelor in Computer science <span className='block font-mono'>(2018 - 2021)</span></li>
-								<li className='text-md text-gray-400'>Apprenticeship in software development <span className='block font-mono'>(2013 - 2017)</span></li>
+								<li className='text-md font-bold text-gray-400'>Bachelor in Computer science <span className='block text-sm font-medium font-mono'>[2018 - 2021]</span></li>
+								<li className='text-md font-bold text-gray-400'>Apprenticeship in software development <span className='block text-sm font-medium font-mono'>[2013 - 2017]</span></li>
 							</ul>
 						</div>
 
 						<div className='flex flex-col md:flex-1 min-w-0 gap-2'>
 							<h1 className='text-xl text-white'>Professional experience</h1>
 							<ul className='flex flex-col gap-2'>
-								<li className='text-md text-gray-400'>Software engineer at Adnovum <span className='block font-mono'>(2021 - present)</span></li>
-								<li className='text-md text-gray-400'>Application developer at Geodis - Dublin <span className='block font-mono'>(2018 - 7 months)</span></li>
-								<li className='text-md text-gray-400'>Indie Hacker <span className='block font-mono'>(2013 - now)</span></li>
-								<li className='text-md text-gray-400'>Apprentice application developer for HEAI <span className='block font-mono'>(2013 - 2017)</span>
+								<li className='text-md font-bold text-gray-400'>Software engineer at Adnovum <span className='block text-sm font-medium font-mono'>[2021 - present]</span></li>
+								<li className='text-md font-bold text-gray-400'>Application developer at Geodis - Dublin <span className='block text-sm font-medium font-mono'>[2018 - 7 months]</span></li>
+								<li className='text-md font-bold text-gray-400'>Indie Hacker <span className='block text-sm font-medium font-mono'>[2013 - now]</span></li>
+								<li className='text-md font-bold text-gray-400'>Apprentice application developer for HEAI <span className='block text-sm font-medium font-mono'>[2013 - 2017]</span>
 								</li>
 							</ul>
 						</div>
@@ -89,7 +89,7 @@ export default function Home() {
 							<a target={'_blank'} href={'https://www.instagram.com/justinnydegger/'}
 								 className='text-md text-gray-400 hover:text-gray-300 transition'>instagram.com</a>
 							<a href={"mailto:justin@nydegger.me"}
-								 className='text-md w-min	block text-white hover:text-gray-300 transition rounded-full p-4 bg-[#295EC4]'>justin@nydegger.me</a>
+								 className='text-md w-min	block text-white hover:text-gray-300 transition rounded-2xl py-4 px-6 bg-[#295EC4]'>justin@nydegger.me</a>
 						</div>
 					</div>
 				</div>
