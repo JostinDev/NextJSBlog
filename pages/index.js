@@ -39,8 +39,8 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div className='flex flex-col lg:flex-1 lg:pr-4 flex-wrap'>
-					<div className='flex flex-col md:flex-row md:flex-1 justify-between pt-10 gap-6 flex-wrap'>
+				<div className='flex flex-col flex-1 lg:pr-4 flex-wrap'>
+					<div className='flex flex-col md:flex-row flex-1 justify-between pt-10 gap-6 flex-wrap'>
 
 						<div className='flex flex-col md:flex-1 min-w-0'>
 							<h1 className='text-xl text-white'>About me</h1>
@@ -77,7 +77,7 @@ export default function Home() {
 						</div>
 
 					</div>
-					<div className='flex flex-col md:flex-row md:flex-1 justify-between pt-10 gap-6 flex-wrap'>
+					<div className='flex flex-col md:flex-row flex-1 justify-between pt-10 gap-6 flex-wrap'>
 						<div className='flex flex-col md:flex-1 min-w-0'>
 							<List itemsNumber={8} seeMoreLink={'/projects'} title={'Projects'} items={projects.data}></List>
 						</div>
@@ -92,7 +92,7 @@ export default function Home() {
 							<a target={'_blank'} href={'https://www.instagram.com/justinnydegger/'}
 								 className='text-md text-gray-400 hover:text-gray-300 transition'>instagram.com</a>
 							<a href={"mailto:justin@nydegger.me"}
-								 className='text-md w-min	block text-white hover:text-gray-300 transition rounded-2xl py-4 px-6 bg-[#295EC4]'>justin@nydegger.me</a>
+								 className='text-md w-min	block text-white hover:text-gray-300 transition rounded-2xl mt-6 py-4 px-6 bg-[#295EC4]'>justin@nydegger.me</a>
 						</div>
 					</div>
 				</div>
