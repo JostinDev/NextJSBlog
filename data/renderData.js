@@ -1,5 +1,11 @@
 const renderData = [
 	{
+		title: 'Eternal Ascent',
+		img: '/images/renders/eternalAscent.png',
+		date: 'March 2024',
+		link: 'https://www.youtube.com/watch?v=UoVAfI6Rzp0'
+	},
+	{
 		title: 'Boss Fight',
 		img: '/images/renders/bossFight.png',
 		date: 'August 2023',
