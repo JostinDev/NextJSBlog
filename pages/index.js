@@ -54,34 +54,36 @@ export default function Home() {
 								A naturally curious person, I travel the world as much as possible and deeply value human connection.
 							</p>
 						</div>
-						<div className='flex flex-col md:flex-1 min-w-0 gap-2'>
-							<h1 className='text-xl text-white'>Education</h1>
-							<ul className='flex flex-col gap-2'>
-								<li className='text-md font-bold text-gray-400'>PADI Rescue Diver <span className='block text-sm font-medium font-mono'>[2025]</span></li>
-								<li className='text-md font-bold text-gray-400'>Bachelor in Computer science <span className='block text-sm font-medium font-mono'>[2018 - 2021]</span></li>
-								<li className='text-md font-bold text-gray-400'>Apprenticeship in software development <span className='block text-sm font-medium font-mono'>[2013 - 2017]</span></li>
-							</ul>
-						</div>
 
-						<div className='flex flex-col md:flex-1 min-w-0 gap-2'>
-							<h1 className='text-xl text-white'>Professional experience</h1>
-							<ul className='flex flex-col gap-2'>
-								<li className='text-md font-bold text-gray-400'>Software engineer - Team Lead at Adnovum <span className='block text-sm font-medium font-mono'>[2021 - 2024]</span></li>
-								<li className='text-md font-bold text-gray-400'>Application developer at Geodis - Dublin <span className='block text-sm font-medium font-mono'>[2018 - 7 months]</span></li>
-								<li className='text-md font-bold text-gray-400'>Indie Hacker <span className='block text-sm font-medium font-mono'>[2013 - now]</span></li>
-								<li className='text-md font-bold text-gray-400'>Apprentice application developer at HEAI <span className='block text-sm font-medium font-mono'>[2013 - 2017]</span>
-								</li>
-							</ul>
-						</div>
+							<div className='flex flex-col md:flex-1 min-w-0'>
+								<List itemsNumber={8} seeMoreLink={'/projects'} title={'Projects'} items={projects.data}></List>
+							</div>
+							<div className='flex flex-col md:flex-1 min-w-0'>
+								<List itemsNumber={8} seeMoreLink={'/renders'} title={'My art'} items={renders.data}></List>
+							</div>
 
 					</div>
 					<div className='flex flex-col md:flex-row flex-1 justify-between pt-10 gap-6 flex-wrap'>
-						<div className='flex flex-col md:flex-1 min-w-0'>
-							<List itemsNumber={8} seeMoreLink={'/projects'} title={'Projects'} items={projects.data}></List>
-						</div>
-						<div className='flex flex-col md:flex-1 min-w-0'>
-							<List itemsNumber={8} seeMoreLink={'/renders'} title={'Renders'} items={renders.data}></List>
-						</div>
+						
+						<div className='flex flex-col md:flex-1 min-w-0 gap-2'>
+								<h1 className='text-xl text-white'>Education</h1>
+								<ul className='flex flex-col gap-2'>
+									<li className='text-md font-bold text-gray-400'>PADI Rescue Diver <span className='block text-sm font-medium font-mono'>[2025]</span></li>
+									<li className='text-md font-bold text-gray-400'>Bachelor in Computer science <span className='block text-sm font-medium font-mono'>[2018 - 2021]</span></li>
+									<li className='text-md font-bold text-gray-400'>Apprenticeship in software development <span className='block text-sm font-medium font-mono'>[2013 - 2017]</span></li>
+								</ul>
+							</div>
+
+							<div className='flex flex-col md:flex-1 min-w-0 gap-2'>
+								<h1 className='text-xl text-white'>Professional experience</h1>
+								<ul className='flex flex-col gap-2'>
+									<li className='text-md font-bold text-gray-400'>Software engineer - Team Lead at Adnovum <span className='block text-sm font-medium font-mono'>[2021 - 2024]</span></li>
+									<li className='text-md font-bold text-gray-400'>Application developer at Geodis - Dublin <span className='block text-sm font-medium font-mono'>[2018 - 7 months]</span></li>
+									<li className='text-md font-bold text-gray-400'>Indie Hacker <span className='block text-sm font-medium font-mono'>[2013 - now]</span></li>
+									<li className='text-md font-bold text-gray-400'>Apprentice application developer at HEAI <span className='block text-sm font-medium font-mono'>[2013 - 2017]</span>
+									</li>
+								</ul>
+							</div>
 
 						<div className='hidden md:flex flex-col md:flex-1 min-w-0 gap-2'>
 							<h1 className='text-xl text-white'>Contact me</h1>
