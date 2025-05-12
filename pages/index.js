@@ -16,7 +16,7 @@ export default function Home() {
 					<link rel="icon" href="/favicon.ico"/>
 				</Head>
 
-				<div className='hidden lg:block md:w-[400px] xl:w-[500px] rounded-l-2xl rounded-r-sm w-full h-full bg-center bg-no-repeat bg-cover p-8'
+				<div className='hidden lg:block md:w-[400px] 2xl:w-[500px] rounded-l-2xl rounded-r-sm w-full h-full bg-center bg-no-repeat bg-cover p-8'
 						 style={{backgroundImage: `url(${justin.src})`}}>
 					<p className='hidden lg:block text-white text-4xl'>Justin Nydegger</p>
 				</div>
