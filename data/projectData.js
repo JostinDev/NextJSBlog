@@ -42,13 +42,6 @@ const projectData = [
 		link: 'https://www.swissmeca.ch/?lang=en'
 	},
 	{
-		title: 'Cave aux hirondelles',
-		description: 'E-commerce website of a winemaker wishing to promote his products',
-		img: '/images/projects/caveAuxHirondelles.png',
-		date: 'September 2020',
-		link: 'https://caveauxhirondelles.ch/'
-	},
-	{
 		title: 'Acer Jardin',
 		description: 'Website of a gardener who wants to create an online presence',
 		img: '/images/projects/acer.png',
@@ -61,14 +54,7 @@ const projectData = [
 		img: '/images/projects/andyNatural.png',
 		date: 'July 2019',
 		link: 'https://andy-natural.com/'
-	},
-	{
-		title: 'Maternelle Les petits lapins',
-		description: 'Website for a nursery school in the region of Fribourg',
-		img: '/images/projects/maternelle.png',
-		date: 'April 2019',
-		link: 'https://maternellelespetitslapins.ch/'
-	},
+	}
 ]
 
 export default { data: projectData }
