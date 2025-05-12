@@ -1,5 +1,26 @@
 const projectData = [
 	{
+		title: 'AGOV - Team Lead Frontend',
+		description: 'Login for Swiss public authorities',
+		img: '/images/projects/agov.png',
+		date: 'August 2024',
+		link: 'https://www.agov.admin.ch/en'
+	},
+	{
+		title: 'Embrave - Challenge yourself',
+		description: 'A web app to challenge yourself and friends out of your comfort zone',
+		img: '/images/projects/embrave.png',
+		date: 'October 2024',
+		link: 'https://embrave.app/'
+	},
+	{
+		title: 'eIAM - Frontend Developer',
+		description: "Federal Administration's central access and permissions system",
+		img: '/images/projects/eiam.png',
+		date: 'March 2023',
+		link: 'https://www.eiam.swiss/pages/eiam_en.html?&l=en&ll=1?&1747044840?&1747044900'
+	},
+	{
 		title: 'One year of learning 3D',
 		description: 'I picked 3D animation as a new hobby in 2022. Here is my progression so far',
 		img: '/images/projects/blender2022.jpeg',

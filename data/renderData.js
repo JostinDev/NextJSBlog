@@ -1,5 +1,11 @@
 const renderData = [
 	{
+		title: 'Kinetic Rush',
+		img: '/images/renders/kineticRush.png',
+		date: 'August 2024',
+		link: 'https://www.youtube.com/watch?v=meOTzSsu0JM'
+	},
+	{
 		title: 'Eternal Ascent',
 		img: '/images/renders/eternalAscent.png',
 		date: 'March 2024',
