@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import justin from '../public/justin.png'
-import justinTest from '../public/testpic.jpg'
-import justinTestSquare from '../public/testpicSquare.png'
+import justin from '../public/justin.jpg'
 import justinSquare from '../public/justinSquare.png'
 import projects from "../data/projectData";
 import renders from "../data/renderData";
@@ -19,12 +17,12 @@ export default function Home() {
 				</Head>
 
 				<div className='hidden lg:block md:w-[400px] xl:w-[500px] rounded-l-2xl rounded-r-sm w-full h-full bg-center bg-no-repeat bg-cover p-8'
-						 style={{backgroundImage: `url(${justinTest.src})`}}>
+						 style={{backgroundImage: `url(${justin.src})`}}>
 					<p className='hidden lg:block text-white text-4xl'>Justin Nydegger</p>
 				</div>
 
 				<div className='flex lg:hidden flex-col sm:flex-row gap-4'>
-					<Image className='rounded-full' src={justinTestSquare} width={200} alt={''}></Image>
+					<Image className='rounded-full' src={justinSquare} width={200} alt={''}></Image>
 					<div className='flex flex-col flex-1 min-w-0 gap-2'>
 						<p className='lg:hidden text-white text-4xl'>Justin Nydegger</p>
 						<div className='flex gap-1 flex-col ml-2'>
