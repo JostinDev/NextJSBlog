@@ -69,6 +69,7 @@ export default function Home() {
 								<h1 className='text-xl text-white'>Education</h1>
 								<ul className='flex flex-col gap-2'>
 									<li className='text-md font-bold text-gray-400'>PADI Rescue Diver <span className='block text-sm font-medium font-mono'>[2025]</span></li>
+									<li className='text-md font-bold text-gray-400'>Cantonal certificate for company instructors <span className='block text-sm font-medium font-mono'>[2023]</span></li>
 									<li className='text-md font-bold text-gray-400'>Bachelor in Computer science <span className='block text-sm font-medium font-mono'>[2018 - 2021]</span></li>
 									<li className='text-md font-bold text-gray-400'>Apprenticeship in software development <span className='block text-sm font-medium font-mono'>[2013 - 2017]</span></li>
 								</ul>
