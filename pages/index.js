@@ -88,9 +88,9 @@ export default function Home() {
 						<div className='md:flex flex-col md:flex-1 min-w-0 gap-2'>
 							<h1 className='text-xl text-white'>Contact me</h1>
 							<a target={'_blank'} href={'https://x.com/LeJostin'}
-								 className='text-md text-gray-400 hover:text-gray-300 transition'>x.com</a>
+								 className='text-md block text-gray-400 hover:text-gray-300 transition'>x.com</a>
 							<a target={'_blank'} href={'https://www.instagram.com/justinnydegger/'}
-								 className='text-md text-gray-400 hover:text-gray-300 transition'>instagram.com</a>
+								 className='text-md block text-gray-400 hover:text-gray-300 transition'>instagram.com</a>
 							<a href={"mailto:justin@nydegger.me"}
 								 className='text-md w-min block text-white hover:text-gray-300 transition rounded-2xl mt-6 py-4 px-6 bg-[#334d3f]'>justin@nydegger.me</a>
 						</div>
