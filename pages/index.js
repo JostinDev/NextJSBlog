@@ -85,7 +85,7 @@ export default function Home() {
 								</ul>
 							</div>
 
-						<div className='hidden md:flex flex-col md:flex-1 min-w-0 gap-2'>
+						<div className='md:flex flex-col md:flex-1 min-w-0 gap-2'>
 							<h1 className='text-xl text-white'>Contact me</h1>
 							<a target={'_blank'} href={'https://x.com/LeJostin'}
 								 className='text-md text-gray-400 hover:text-gray-300 transition'>x.com</a>
