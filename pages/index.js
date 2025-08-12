@@ -45,14 +45,11 @@ export default function Home() {
 						<div className='flex flex-col md:flex-1 min-w-0'>
 							<h1 className='text-xl text-white'>About me</h1>
 							<p className='text-md text-gray-400 mt-2'>
-								I am a Swiss software engineer passionate about building fast, user-centric web experiences that make an impact.
-							</p>
+								I am a Swiss software engineer passionate about building fast, user-centric web experiences that make an impact.							</p>
 							<p className='text-md text-gray-400 mt-2'>
-								I thrive in dynamic environments where curiosity, rapid learning, and creative problem-solving drive innovation.
-							</p>
+								I thrive in dynamic environments where curiosity, rapid learning, and creative problem-solving drive innovation.							</p>
 							<p className='text-md text-gray-400 mt-2'>
-								A naturally curious person, I travel the world as much as possible and deeply value human connection.
-							</p>
+								Curious by nature, I enjoy discovering new horizons through travel and deeply value human connection.							</p>
 						</div>
 
 							<div className='flex flex-col md:flex-1 min-w-0'>
@@ -88,12 +85,8 @@ export default function Home() {
 
 						<div className='md:flex flex-col md:flex-1 min-w-0 gap-2'>
 							<h1 className='text-xl text-white'>Contact me</h1>
-							<a target={'_blank'} href={'https://x.com/LeJostin'}
-								 className='text-md block text-gray-400 hover:text-gray-300 transition'>x.com</a>
-							<a target={'_blank'} href={'https://www.instagram.com/justinnydegger/'}
-								 className='text-md block text-gray-400 hover:text-gray-300 transition'>instagram.com</a>
 							<a href={"mailto:justin@nydegger.me"}
-								 className='text-md w-min block text-white hover:text-gray-300 transition rounded-2xl mt-6 py-4 px-6 bg-[#334d3f]'>justin@nydegger.me</a>
+								 className='text-md w-min block text-white hover:text-gray-300 transition rounded-2xl mt-1 py-4 px-6 bg-[#334d3f]'>justin@nydegger.me</a>
 						</div>
 					</div>
 				</div>

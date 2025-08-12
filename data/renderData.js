@@ -1,5 +1,11 @@
 const renderData = [
 	{
+		title: 'Through the Orange Veil',
+		img: '/images/renders/orangeVeil.png',
+		date: 'April 2025',
+		link: 'https://youtu.be/H7Zkq3qyqMM'
+	},
+	{
 		title: 'Kinetic Rush',
 		img: '/images/renders/kineticRush.png',
 		date: 'August 2024',
