@@ -1,7 +1,7 @@
 const projectData = [
     {
         title: 'ezrecipe',
-        description: 'A web app to save and share you favourite recipe',
+        description: 'A web app to save and share your favourite recipes',
         img: '/images/projects/ezrecipe.png',
         date: 'August 2025',
         link: 'https://ezrecipe.dev/'
