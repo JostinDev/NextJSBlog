@@ -1,5 +1,12 @@
 const projectData = [
-	{
+    {
+        title: 'ezrecipe',
+        description: 'A web app to save and share you favourite recipe',
+        img: '/images/projects/ezrecipe.png',
+        date: 'August 2025',
+        link: 'https://ezrecipe.dev/'
+    },
+    {
 		title: 'AGOV - Team Lead Frontend',
 		description: 'Login for Swiss public authorities',
 		img: '/images/projects/agov.png',
