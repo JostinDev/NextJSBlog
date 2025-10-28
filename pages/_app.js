@@ -1,9 +1,6 @@
 import '../styles/globals.css'
-import { useRouter } from 'next/router'
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter()
-  const isLoginPage = router.pathname === '/'
 
   return (
       <div className='flex bg-gradient-to-br from-[#334d3f] to-gray-950 min-h-screen'>
